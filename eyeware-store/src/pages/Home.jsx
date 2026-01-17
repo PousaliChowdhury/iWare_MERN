@@ -30,10 +30,7 @@ export default function Home() {
 
   return (
     <div className="page home-page">
-      {/* Hero Section */}
-      {/* Hero Section */}
 <section className="hero-video relative w-full h-screen overflow-hidden">
-  {/* Background Video */}
   <video
     className="absolute top-0 left-0 w-full h-full object-cover"
     src="videos/hero-video.mov"
@@ -43,17 +40,12 @@ export default function Home() {
     playsInline
   />
 
-  {/* Hero Text Overlay */}
   <div className="hero-text flex flex-col items-center justify-center absolute inset-0 mx-auto">
     <h1>Luxury Eyewear Collection</h1>
     <p>Discover premium sunglasses, eyeglasses, and smart eyewear crafted for elegance.</p>
   </div>
 </section>
 
-
-      
-
-      {/* Categories Section */}
       <section className="grid categories">
         <Link to="/sunglasses" className="product-card">
           <img src="/sunglasses.jpeg" alt="Sunglasses" />
@@ -81,7 +73,6 @@ export default function Home() {
         </Link>
       </section>
       
-{/* Carousel Section */}
       <section className="carousel">
         <div
           className="carousel-track"
@@ -98,7 +89,6 @@ export default function Home() {
         <button className="next" onClick={nextSlide}>›</button>
       </section>
 
-      {/* Editorial / Storytelling */}
       <section className="editorial">
         <div className="story">
           <img src="/story1.jpg" alt="Story 1" />
