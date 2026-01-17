@@ -1,0 +1,120 @@
+.page.product-detail-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+
+.main-product-img {
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.price {
+  font-size: 1.25rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.actions button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.actions .bg-black {
+  background: black;
+  color: white;
+  border: none;
+}
+
+.actions .bg-black:hover {
+  background: #333;
+}
+
+.actions .border {
+  border: 2px solid black;
+  background: white;
+  color: black;
+}
+
+.actions .border:hover {
+  background: black;
+  color: white;
+}
+
+/* Editorial Section */
+.product-editorial {
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Lifestyle Carousel */
+.product-lifestyle-carousel {
+  margin-top: 2.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.lifestyle-image {
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carousel-wrapper button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.2s ease;
+}
+
+.carousel-wrapper button:hover {
+  color: black;
+}
+.carousel-wrapper button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+.carousel-wrapper button:focus {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+
+

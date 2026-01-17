@@ -1,0 +1,110 @@
+.auth-page {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.auth-box {
+  text-align: center;
+}
+
+.auth-box h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #111;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form input {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.auth-form input:focus {
+  border-color: #e6b800;
+  box-shadow: 0 0 4px rgba(230, 184, 0, 0.6);
+  outline: none;
+}
+
+.auth-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.auth-btn:hover {
+  background: #333;
+}
+
+.auth-box p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-box p {
+  color: #19011f;
+  text-decoration: none;
+}
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+/* Button - Blue Theme */
+.auth-btn,
+.auth-form button {
+  background: #007bff;   /* bootstrap blue */
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.auth-btn:hover,
+.auth-form button:hover {
+  background: #0056b3;   /* darker blue on hover */
+}
+
+/* Link Styling */
+.auth-box a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+.auth-box p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.auth-box p a {
+  color: #53a2f6;       /* blue */
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.auth-box p a:hover {
+  color: #0056b3;
+}

@@ -1,0 +1,49 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auth-modal {
+  background: white;
+  width: 400px;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.auth-bg {
+  min-height: 100vh;
+  background: url("/auth-bg.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.4);
+}
+
+.auth-card {
+  position: relative;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  width: 380px;
+  z-index: 1;
+}

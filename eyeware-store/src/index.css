@@ -1,0 +1,946 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fafafa;
+  color: #111;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a:hover {
+  color: gray;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.5px;
+}
+
+.hero {
+  height: 70vh;
+  background: url('https://via.placeholder.com/1600x900?text=Luxury+Hero') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero div {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  width: 100%;
+  display: block;
+}
+
+.product-card h2 {
+  margin: 0.5rem;
+}
+
+.product-card p {
+  margin: 0.5rem;
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+button.bg-black {
+  background: black;
+  color: white;
+}
+
+button.bg-black:hover {
+  background: #333;
+}
+
+button.border {
+  border: 2px solid #333;
+  background: white;
+}
+
+button.border:hover {
+  background: #eee;
+}
+
+.page {
+  padding: 2rem;
+}
+
+/* ================== Home Page Styles ================== */
+
+/* Hero Section */
+.hero {
+  height: 70vh;
+  background: url('/hero-background.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+}
+
+.hero div {
+  position: relative; /* above overlay */
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05); /* subtle translucent box */
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+/* Grid Section */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card h2 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Hover Effects */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Smooth text appearance */
+.hero h1, .hero p, .product-card h2 {
+  transition: all 0.3s ease;
+}
+
+/* Optional: add subtle transition to links */
+a.product-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hero Section remains the same from previous setup */
+
+/* Categories Grid */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.categories .product-card img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Add hover effects to all cards */
+.categories .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.categories .product-card h2 {
+  font-size: 1.3rem;
+  margin: 0.8rem 0;
+  color: #111;
+}
+
+/* Hero Section */
+.hero-image {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(0,0,0,0.1);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+
+/* Overlay over the entire hero for better contrast */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Hero Text Block floating directly on hero background */
+.hero-text {
+  position: relative; 
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  z-index: 1; 
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Hero Text Typography */
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+
+.hero-text, .carousel-caption, .story-text h2 {
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.logout-btn {
+  background: #e6b800;
+  border: none;
+  color: #111;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #d4a700;
+}
+
+ 
+.navbar .logo img {
+  height: 50px;
+}
+
+/* ================= Search Bar ================= */
+
+.search-container,
+.search-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #f9f9f9;
+  height: 50px;
+  width: 100%;          /* take full available width */
+  max-width: 700px;     /* don’t stretch too much */
+  margin: 0 auto;       /* center in navbar */
+}
+
+.search-form input {
+  border: none;
+  padding: 0.5rem 1rem;
+  outline: none;
+  flex: 1;              /* take remaining space */
+  font-size: 1rem;
+  background: transparent;
+  color: #111;
+  min-width: 0;         /* prevent overflow */
+}
+
+.search-form button {
+  border: none;
+  background: #111;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 999px;
+  font-size: 1rem;
+  margin-right: 10px;
+  flex-shrink: 0;       /* button stays visible */
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .search-form {
+    max-width: 100%;
+    height: 45px;
+  }
+
+  .search-form input {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .search-form button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0 0 6px 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.suggestions li {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.suggestions li:hover {
+  background: #f0f0f0;
+}
+
+/*================= Navbar ================= */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  color: #111;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #555;
+}
+.nav-links .cart-count {
+  background: #111;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.9rem;
+  margin-left: 0.3rem;
+}
+.logo.react {
+  filter: drop-shadow(0 0 0em #61dafbaa);
+  transition: filter 0.3s ease;
+  height: 40px;
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+
+
+
+/* ================= Product Card Buttons ================= */
+.product-card .btn-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.product-card button {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.product-card button:hover {
+  transform: scale(1.2);
+  color: #e6b800; /* highlight on hover */
+}
+.product-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  gap: 8px;
+}
+
+.product-actions button {
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* ================= Cart & Wishlist Pages ================= */
+.cart-page, .wishlist-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.cart-page h1, .wishlist-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cart-item, .wishlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cart-item:hover, .wishlist-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.cart-item img, .wishlist-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.cart-item button, .wishlist-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.cart-item button:hover, .wishlist-item button:hover {
+  color: #e6b800;
+  transform: scale(1.2);
+}
+
+/* ================= Cart “Buy Now” Button ================= */
+.buy-now-btn {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.buy-now-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* ================= Hero Section Interactive ================= */
+.hero div h1, .hero div p {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= Product Hover Overlay ================= */
+.product-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.05);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover::after {
+  opacity: 1;
+}
+
+/* ================= Responsive Fixes ================= */
+@media (max-width: 768px) {
+  .grid, .categories {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .cart-item, .wishlist-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img, .wishlist-item img {
+    margin-bottom: 0.5rem;
+  }
+
+  .buy-now-btn {
+    width: 90%;
+  }
+}
+
+/* ================= Navbar User Info & Logout ================= */
+.nav-links .user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links .logout-btn {
+  background: #e6b800;
+  color: #111;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.nav-links .logout-btn:hover {
+  background: #d4a700;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+/* ================= Cart/Wishlist Empty Message ================= */
+.cart-page p, .wishlist-page p {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+/* ================= Optional Badges ================= */
+.product-card .badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: #e6b800;
+  color: #111;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+}
+
+
+/* =================== Hero Video Section =================== */
+
+
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.hero-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative; 
+  z-index: 1;
+  text-align: center;
+  color: rgb(3, 3, 3);
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(0,0,0,0.0); 
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; 
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+
+/* =================== Carousel Section =================== */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+  border-radius: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* =================== Editorial / Storytelling =================== */
+.editorial {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.story {
+  flex: 1 1 45%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.story img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+
+.story-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.story-text p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* =================== Responsive Tweaks =================== */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .carousel-item {
+    min-width: 220px;
+    height: auto;
+  }
+
+  .editorial {
+    flex-direction: column;
+  }
+
+  .story {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .story img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.product-image-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.product-image-container img {
+  width: 100%;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.product-image-container:hover img {
+  transform: scale(1.5); /* zoom on hover */
+}
+.support-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #111;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+.support-widget:hover {
+  background: #333;
+  transform: translateY(-3px);
+}
+
+
+.product-editorial {
+  margin: 2rem 0;
+}
+
+.product-lifestyle-carousel {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.lifestyle-image {
+  width: 400px;
+  border-radius: 1rem;
+}
+
+.carousel-wrapper button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.carousel-wrapper button:hover {
+  color: #e6b800;
+}
+
+
