@@ -65,10 +65,9 @@
   text-decoration: underline;
 }
 
-/* Button - Blue Theme */
 .auth-btn,
 .auth-form button {
-  background: #007bff;   /* bootstrap blue */
+  background: #007bff;   
   color: #fff;
   border: none;
   padding: 0.8rem;
@@ -80,10 +79,9 @@
 
 .auth-btn:hover,
 .auth-form button:hover {
-  background: #0056b3;   /* darker blue on hover */
+  background: #0056b3;   
 }
 
-/* Link Styling */
 .auth-box a {
   color: #007bff;
   text-decoration: none;
@@ -100,7 +98,7 @@
 }
 
 .auth-box p a {
-  color: #53a2f6;       /* blue */
+  color: #53a2f6;       
   font-weight: 500;
   text-decoration: underline;
 }
