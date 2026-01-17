@@ -36,7 +36,7 @@ export default function Navbar() {
     const matches = products
       .filter((p) => p.name.toLowerCase().includes(value.toLowerCase()))
       .map((p) => p.name);
-    setSuggestions(matches.slice(0, 5)); // show only top 5
+    setSuggestions(matches.slice(0, 5)); 
   };
 
   const handleSelectSuggestion = (name) => {
@@ -48,12 +48,10 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      {/* Logo */}
       <Link to="/" className="logo">
         <img src="/logo.jpg" alt="Luxury Eyewear Logo" />
       </Link>
 
-      {/* Search Bar */}
       <div className="search-container">
         <form onSubmit={handleSearch} className="search-form">
           <input
@@ -75,16 +73,13 @@ export default function Navbar() {
         )}
       </div>
 
-      {/* Links with Icons */}
       <div className="nav-links">
         <Link to="/">🏠</Link>
         <Link to="/wishlist">❤️</Link>
         <Link to="/cart">🛒</Link>
 
-        {/* Account button always visible */}
         <Link to="/login">👤</Link>
 
-        {/* Logout button only if user logged in */}
         {user && (
           <button onClick={logout} className="logout-btn" style={{ marginLeft: "0.5rem" }}>
             ➜]
