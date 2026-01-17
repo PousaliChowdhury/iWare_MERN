@@ -11,7 +11,6 @@ export default function ProductCard({ product }) {
   const cart = useStore((s) => s.cart);
   const wishlist = useStore((s) => s.wishlist);
 
-  // 🔑 Compare IDs as strings
   const inCart = cart.some((p) => String(p._id) === String(product._id));
   const inWishlist = wishlist.some((p) => String(p._id) === String(product._id));
 
@@ -22,7 +21,7 @@ export default function ProductCard({ product }) {
     if (inCart) {
       await removeFromCart(product._id);
     } else {
-      await addToCart(product._id); // ✅ FIX
+      await addToCart(product._id);
     }
     setError("");
   } catch (err) {
@@ -36,7 +35,7 @@ const handleWishlist = async () => {
     if (inWishlist) {
       await removeFromWishlist(product._id);
     } else {
-      await addToWishlist(product._id); // ✅ FIX
+      await addToWishlist(product._id);
     }
     setError("");
   } catch (err) {
