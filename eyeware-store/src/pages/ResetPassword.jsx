@@ -10,7 +10,7 @@ export default function ResetPassword() {
   const submit = async (e) => {
     e.preventDefault();
     await axios.post(
-      `http://localhost:7000/api/auth/reset-password/${token}`,
+      `${import.meta.env.VITE_API_URL}/api/auth/reset-password/${token}`,
       { password }
     );
     alert("Password reset successful");
