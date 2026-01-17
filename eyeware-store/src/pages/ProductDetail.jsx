@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "../App.css"; // Ensure you have styles for hero, carousel, editorial
+import "../App.css"; 
 
 export default function ProductDetail() {
-  const { id } = useParams(); // MongoDB ObjectId
+  const { id } = useParams(); 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -43,7 +43,6 @@ export default function ProductDetail() {
 
   return (
     <div className="page product-detail-page">
-      {/* Hero Section with Product Image */}
       <section className="hero-video relative w-full h-screen overflow-hidden">
         <img
           src={product.image}
@@ -57,7 +56,6 @@ export default function ProductDetail() {
         </div>
       </section>
 
-      {/* Editorial / Product Story */}
       <section className="editorial py-16 px-8 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">Product Story</h2>
         <p className="text-lg">
@@ -65,7 +63,6 @@ export default function ProductDetail() {
         </p>
       </section>
 
-      {/* Lifestyle / Campaign Carousel */}
       {product.lifestyleImages && product.lifestyleImages.length > 0 && (
         <section className="carousel py-16 px-8 max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">See It in Lifestyle</h2>
