@@ -20,33 +20,28 @@ export default function Signup() {
     setError("");
 
     try {
-      // Call backend signup API
-      const res = await axios.post("http://localhost:7000/api/auth/signup", {
+      const res = await axios.post("${import.meta.env.VITE_API_URL}/api/auth/signup", {
         email: form.email,
         password: form.password,
       });
 
-      // After signup, backend should return token + user
       if (!res.data.token || !res.data.user) {
         alert("✅ Signup successful! Please login.");
         return navigate("/login");
       }
 
-      // Save token
       localStorage.setItem("token", res.data.token);
 
-      // Store user in Zustand
       login({
         id: res.data.user.id,
         email: res.data.user.email,
         token: res.data.token,
       });
 
-      // Load empty cart & wishlist
       await fetchUserData();
 
       alert("✅ Signup successful!");
-      navigate("/"); // go to home page
+      navigate("/"); 
     } catch (err) {
       console.error(err);
       setError(err.response?.data?.msg || "Signup failed");
