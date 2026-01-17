@@ -95,11 +95,11 @@ router.post("/forgot-password", async (req, res) => {
       .update(resetToken)
       .digest("hex");
 
-    user.resetPasswordExpires = Date.now() + 15 * 60 * 1000; // 15 mins
+    user.resetPasswordExpires = Date.now() + 15 * 60 * 1000; 
 
     await user.save();
 
-    const resetURL = `http://localhost:3000/reset-password/${resetToken}`;
+    const resetURL = `${import.meta.env.VITE_API_URL}/reset-password/${resetToken}`;
 
     console.log("🔑 Password reset link:", resetURL);
 
