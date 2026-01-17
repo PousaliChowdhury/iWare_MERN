@@ -5,7 +5,6 @@ import authMiddleware from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
-// ADD TO CART
 router.post("/cart/:productId", authMiddleware, async (req, res) => {
   const { productId } = req.params;
 
@@ -24,7 +23,6 @@ router.post("/cart/:productId", authMiddleware, async (req, res) => {
 });
 
 
-// REMOVE FROM CART
 router.delete("/cart/:productId", authMiddleware, async (req, res) => {
   const { productId } = req.params;
 
@@ -40,7 +38,6 @@ router.delete("/cart/:productId", authMiddleware, async (req, res) => {
 });
 
 
-// ADD TO WISHLIST
 router.post("/wishlist/:productId", authMiddleware, async (req, res) => {
   const { productId } = req.params;
 
@@ -59,7 +56,6 @@ router.post("/wishlist/:productId", authMiddleware, async (req, res) => {
 });
 
 
-// REMOVE FROM WISHLIST
 router.delete("/wishlist/:productId", authMiddleware, async (req, res) => {
   const { productId } = req.params;
 
@@ -109,7 +105,6 @@ router.post("/save/:productId/move-to-cart", authMiddleware, async (req, res) =>
 });
 
 
-// GET USER DATA
 router.get("/me", authMiddleware, async (req, res) => {
   const user = await User.findById(req.user.userId)
     .populate("cart")
