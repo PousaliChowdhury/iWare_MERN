@@ -113,7 +113,6 @@ button.border:hover {
 
 /* ================== Home Page Styles ================== */
 
-/* Hero Section */
 .hero {
   height: 70vh;
   background: url('/hero-background.jpg') center/cover no-repeat;
@@ -128,13 +127,13 @@ button.border:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  background: rgba(0, 0, 0, 0.4); 
 }
 
 .hero div {
-  position: relative; /* above overlay */
+  position: relative; 
   text-align: center;
-  background: rgba(255, 255, 255, 0.05); /* subtle translucent box */
+  background: rgba(255, 255, 255, 0.05); 
   padding: 2rem 3rem;
   border-radius: 1rem;
 }
@@ -151,7 +150,6 @@ button.border:hover {
   letter-spacing: 1px;
 }
 
-/* Grid Section */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -184,7 +182,6 @@ button.border:hover {
   color: #111;
 }
 
-/* Hover Effects */
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -194,20 +191,15 @@ button.border:hover {
   transform: scale(1.05);
 }
 
-/* Smooth text appearance */
 .hero h1, .hero p, .product-card h2 {
   transition: all 0.3s ease;
 }
 
-/* Optional: add subtle transition to links */
 a.product-card {
   text-decoration: none;
   color: inherit;
 }
 
-/* Hero Section remains the same from previous setup */
-
-/* Categories Grid */
 .categories {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -221,7 +213,6 @@ a.product-card {
   border-radius: 1rem 1rem 0 0;
 }
 
-/* Add hover effects to all cards */
 .categories .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -233,7 +224,6 @@ a.product-card {
   color: #111;
 }
 
-/* Hero Section */
 .hero-image {
   position: relative;
   height: 70vh;
@@ -276,8 +266,6 @@ a.product-card {
   letter-spacing: 1px;
 }
 
-
-/* Overlay over the entire hero for better contrast */
 .hero::after {
   content: "";
   position: absolute;
@@ -285,7 +273,6 @@ a.product-card {
   background: rgba(0, 0, 0, 0.4);
 }
 
-/* Hero Text Block floating directly on hero background */
 .hero-text {
   position: relative; 
   padding: 2rem 3rem;
@@ -297,7 +284,6 @@ a.product-card {
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
-/* Hero Text Typography */
 .hero-text h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -317,8 +303,6 @@ a.product-card {
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
-
-/* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -360,7 +344,6 @@ a.product-card {
   background: #d4a700;
 }
 
- 
 .navbar .logo img {
   height: 50px;
 }
@@ -376,20 +359,20 @@ a.product-card {
   overflow: hidden;
   background: #f9f9f9;
   height: 50px;
-  width: 100%;          /* take full available width */
-  max-width: 700px;     /* don’t stretch too much */
-  margin: 0 auto;       /* center in navbar */
+  width: 100%;          
+  max-width: 700px;     
+  margin: 0 auto;       
 }
 
 .search-form input {
   border: none;
   padding: 0.5rem 1rem;
   outline: none;
-  flex: 1;              /* take remaining space */
+  flex: 1;              
   font-size: 1rem;
   background: transparent;
   color: #111;
-  min-width: 0;         /* prevent overflow */
+  min-width: 0;         
 }
 
 .search-form button {
@@ -401,10 +384,10 @@ a.product-card {
   border-radius: 999px;
   font-size: 1rem;
   margin-right: 10px;
-  flex-shrink: 0;       /* button stays visible */
+  flex-shrink: 0;      
 }
 
-/* Mobile tweaks */
+
 @media (max-width: 768px) {
   .search-form {
     max-width: 100%;
@@ -478,10 +461,6 @@ a.product-card {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-
-
-
-
 /* ================= Product Card Buttons ================= */
 .product-card .btn-container {
   display: flex;
@@ -499,7 +478,7 @@ a.product-card {
 
 .product-card button:hover {
   transform: scale(1.2);
-  color: #e6b800; /* highlight on hover */
+  color: #e6b800; 
 }
 .product-card-wrapper {
   display: flex;
@@ -684,7 +663,6 @@ a.product-card {
   margin-top: 2rem;
 }
 
-/* ================= Optional Badges ================= */
 .product-card .badge {
   position: absolute;
   top: 0.5rem;
@@ -747,7 +725,6 @@ a.product-card {
   letter-spacing: 1px;
 }
 
-/* Responsive typography */
 @media (max-width: 768px) {
   .hero-text h1 {
     font-size: 2.2rem;
@@ -757,7 +734,6 @@ a.product-card {
     font-size: 1rem;
   }
 }
-
 
 /* =================== Carousel Section =================== */
 .carousel {
@@ -890,7 +866,7 @@ a.product-card {
 }
 
 .product-image-container:hover img {
-  transform: scale(1.5); /* zoom on hover */
+  transform: scale(1.5); 
 }
 .support-widget {
   position: fixed;
