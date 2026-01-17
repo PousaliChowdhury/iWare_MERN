@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:7000";
+axios.defaults.baseURL = "${import.meta.env.VITE_API_URL}";
 
 export const useStore = create((set, get) => ({
   user: null, 
@@ -23,7 +23,7 @@ export const useStore = create((set, get) => ({
   set({
     cart: res.data.cart,
     wishlist: res.data.wishlist,
-    saveForLater: res.data.saveForLater, // ✅ ADD THIS
+    saveForLater: res.data.saveForLater, 
   });
 },
 
@@ -99,7 +99,7 @@ addToCart: async (productId, navigate) => {
     { headers: { Authorization: `Bearer ${user.token}` } }
   );
 
-  await get().fetchUserData(); // ✅ refresh state
+  await get().fetchUserData(); 
 },
 
   moveToCartFromSave: async (productId) => {
